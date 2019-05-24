@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About oceanspy
 ==============
 
@@ -18,8 +14,17 @@ Summary: A Python package for easy ocean model data analysis and visualization
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/oceanspy-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/oceanspy-feedstock)
+
+<table><tr>
+    
+    <td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6388&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/oceanspy-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
