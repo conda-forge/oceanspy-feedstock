@@ -24,6 +24,8 @@ requirements:
     - python >=3.6
     - xarray
     - xgcm
+    - numpy
+    - pandas
 
 test:
   imports:
@@ -32,7 +34,7 @@ test:
     - pytest
 
 about:
-  home: https://github.com/malmans2/oceanspy
+  home: https://github.com/hainegroup/oceanspy
   license: MIT
   license_family: MIT
   license_file: LICENSE

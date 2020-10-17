@@ -1,7 +1,7 @@
 About oceanspy
 ==============
 
-Home: https://github.com/malmans2/oceanspy
+Home: https://github.com/hainegroup/oceanspy
 
 Package license: MIT
 
