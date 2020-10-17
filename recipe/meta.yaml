@@ -1,4 +1,4 @@
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
   name: oceanspy
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/o/oceanspy/oceanspy-{{ version }}.tar.gz
-  sha256: eb49493812641c0540b6474cc62075ea3f4db54412ecd0d0d9b1f3e102a334f8
+  sha256: 8c684ecdfe03bade171e17f5ae6bedd422e51db6faffed0303e1839051d40614
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
