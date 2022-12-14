@@ -1,35 +1,36 @@
+{% set name = "oceanspy" %}
 {% set version = "0.3.1" %}
 
 package:
-  name: oceanspy
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/o/oceanspy/oceanspy-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/oceanspy-{{ version }}.tar.gz
   sha256: 9cb038c2a7c007b413f492a471c8d3cbc838d632993e44dc04a8bc52ec0e0e5b
 
 build:
-  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.9
     - pip
-    - pytest-runner
-    - pytest
   run:
-    - dask
-    - python >=3.6
-    - xarray
-    - xgcm
+    - python >=3.9
+    - dask-core
+    - xarray >=0.14.1
+    - xgcm >=0.2.0
 
 test:
   imports:
     - oceanspy
+  commands:
+    - pip check
   requires:
-    - pytest
+    - pip
 
 about:
   home: https://github.com/hainegroup/oceanspy
