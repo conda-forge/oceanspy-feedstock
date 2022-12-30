@@ -1,5 +1,5 @@
 {% set name = "oceanspy" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/oceanspy-{{ version }}.tar.gz
-  sha256: 9cb038c2a7c007b413f492a471c8d3cbc838d632993e44dc04a8bc52ec0e0e5b
+  sha256: 0014154b902f83d94b1f4be516e42e6d7bca712bc00ad7e064382698a0b0c719
 
 build:
   noarch: python
