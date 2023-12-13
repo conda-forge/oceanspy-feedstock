@@ -11,18 +11,21 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
     - python >=3.9
+    - setuptools >=45
+    - setuptools-scm >=6.2
     - pip
   run:
     - python >=3.9
     - dask-core
     - xarray >=0.14.1
     - xgcm >=0.2.0
+    - shapely
 
 test:
   imports:
