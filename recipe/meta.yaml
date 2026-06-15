@@ -1,5 +1,5 @@
 {% set name = "oceanspy" %}
-{% set version = "0.3.5" %}
+{% set version = "0.3.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/oceanspy-{{ version }}.tar.gz
-  sha256: c78b5dcff3d49ca0a97ea380e156e99da935ed6ba6a52411fa582d4b9c509c4d
+  sha256: 1a420c188518491bb92d2fe3ed15eb422b2af66049672ead49062c5c1fc63926
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -23,7 +23,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - dask-core
-    - xarray >=0.14.1
+    - xarray >=2024.7.0
     - xgcm >=0.2.0
     - shapely
 
