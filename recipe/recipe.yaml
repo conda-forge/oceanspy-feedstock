@@ -1,0 +1,55 @@
+schema_version: 1
+
+context:
+  python_min: "3.11"
+  version: "0.3.6"
+
+package:
+  name: oceanspy
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/o/oceanspy/oceanspy-${{ version }}.tar.gz
+  sha256: 1a420c188518491bb92d2fe3ed15eb422b2af66049672ead49062c5c1fc63926
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=45
+    - setuptools-scm >=6.2
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - dask-core
+    - xarray >=2024.7.0
+    - xgcm >=0.2.0
+    - shapely
+
+tests:
+  - python:
+      imports:
+        - oceanspy
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  summary: A Python package to facilitate ocean model data analysis and visualization.
+  license: MIT
+  license_file: LICENSE
+  homepage: https://pypi.org/project/oceanspy/
+
+extra:
+  recipe-maintainers:
+    - asiddi24
+    - MaceKuailv
+    - malmans2
+    - Mikejmnez
+    - ocefpaf
+    - ThomasHaine
