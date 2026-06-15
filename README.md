@@ -3,11 +3,11 @@ About oceanspy-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/oceanspy-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/hainegroup/oceanspy
+Home: https://pypi.org/project/oceanspy/
 
 Package license: MIT
 
-Summary: A Python package for easy ocean model data analysis and visualization
+Summary: A Python package to facilitate ocean model data analysis and visualization.
 
 Current build status
 ====================
